@@ -1,0 +1,15 @@
+GITHUB UPLOAD - SIMPLE STEPS
+
+1. Download and extract the ZIP.
+2. Go to https://github.com/new
+3. Repository name: networkwalks-week2-footprinting-scanning
+4. Choose Public if you want employers to see your work.
+5. DO NOT enable GitHub's option to initialize with a README; this project already includes one.
+6. Create the repository.
+7. Click "uploading an existing file" (or Add file > Upload files).
+8. Drag README.md, Week2_Report.pdf and the images folder into GitHub.
+9. Make sure GitHub shows images/01.png through images/04.png.
+10. Click Commit changes.
+11. Return to the repository main page. All four screenshots should show inside the README.
+
+Only the four screenshots supplied for Week 2 are in the archive.
