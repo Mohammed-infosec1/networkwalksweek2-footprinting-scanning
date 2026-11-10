@@ -9,13 +9,11 @@
 
 For Week 2 of my cybersecurity internship, I worked on gathering public information about a domain and scanning a virtual machine in my own lab. I used **theHarvester**, **WHOIS**, and **Zenmap**. I also checked the Windows IP configuration before scanning it.
 
-At first I was learning how to use the tools, so I wanted to keep the results and explain what I actually did. I did the **W2-PM4 theHarvester** elective and the required **W2-PM5 Zenmap** project. This README documents my work, and I prepared a separate Week 2 report as well.
 
 ## Scope of the work
 
 - **Passive footprinting:** `networkwalks.com` (approved by my instructor for this exercise).
 - **Active network scanning:** only my own **Windows virtual machine** at `10.0.0.11` on the VirtualBox NAT Network.
-- I did **not** scan Networkwalks' public servers with Zenmap or try to exploit any system.
 
 ## Tools I used
 
@@ -42,7 +40,7 @@ theHarvester -d networkwalks.com -b hackertarget -l 100
 
 The tool reported **2 hosts found**. It also showed **no direct IP entries, emails, or people** in its other result categories. The hostnames were associated with the same IP address in that result. This is information returned by the source at the time I ran it, not proof that the related services are currently running.
 
-![My theHarvester HackerTarget results](images/01.png)
+![theHarvester HackerTarget results](01.png)
 
 ## 2. Extra footprinting - WHOIS lookup
 
@@ -56,7 +54,7 @@ The output showed **GoDaddy.com, LLC** as the registrar, a **creation date of No
 
 This helped me understand that WHOIS can show registration details, registrar information, nameservers, and domain status. These are the values visible in my screenshot; WHOIS records can change.
 
-![My WHOIS lookup results](images/02.png)
+![WHOIS lookup results](02.png)
 
 ## 3. Checking my Windows virtual machine
 
@@ -76,7 +74,7 @@ These were the settings shown:
 
 I checked this so I would know the correct IP address for the Zenmap target. This was my **own lab machine**, not a public website.
 
-![Windows VM IP configuration](images/03.png)
+![Windows IP configuration](03.png)
 
 ## 4. Zenmap network scanning
 
@@ -99,7 +97,7 @@ nmap -T4 -A -v 10.0.0.11
 
 So Zenmap was able to identify that the host was up, but it couldn't confirm any open TCP ports among those 1,000 checks. This does **not** mean Windows has no services, and it doesn't prove that it's secure. A firewall or another filtering mechanism can make ports show as filtered.
 
-![My Zenmap Intense Scan output](images/04.png)
+![Zenmap Intense Scan output](04.png)
 
 ## What I learned
 
